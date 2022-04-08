@@ -4,9 +4,9 @@
 
 {% block body %}
     <h1>Attachement index</h1>
-    <a href="{{ path('app_attachement_new') }}">Create new</a>
-
-    <table class="table">
+    <a href="{{ path('app_attachement_new') }}"><h4>Create new</h4></a>
+    <br>
+    <table border ="1px" width="100%" class="table">
         <thead>
             <tr>
                 <th>Id</th>
@@ -19,11 +19,11 @@
         <tbody>
         {% for attachement in attachements %}
             <tr>
-                <td>{{ attachement.id }}</td>
-                <td>{{ attachement.name }}</td>
-                <td>{{ attachement.size }}</td>
-                <td>{{ attachement.file }}</td>
-                <td>{{ attachement.content }}</td>
+                <td style="text-align: center;">{{ attachement.id }}</td>
+                <td style="text-align: center;">{{ attachement.name }}</td>
+                <td style="text-align: center;">{{ attachement.size }}</td>
+                <td style="text-align: center;">{{ attachement.file }}</td>
+                <td style="text-align: center;"><a href="../uploads/{{ attachement.name }}" target="_blank">View </a> </td>
             </tr>
         {% else %}
             <tr>

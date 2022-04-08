@@ -16,9 +16,9 @@ class AttachementType extends AbstractType
     {
         $builder
             ->add('file', FileType::class, array(
-                'label' => 'Choisir une fichier',
+                'label' => 'Choose File',
                 'mapped' => false,
-                'required' => false,
+                'required' => true,
                 'multiple' => false,
             ));
     }
