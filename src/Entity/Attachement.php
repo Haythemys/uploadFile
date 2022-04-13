@@ -28,20 +28,6 @@ class Attachement
     private $name;
 
     /**
-     * @var integer
-     *
-     * @ORM\Column(name="size", type="integer")
-     */
-    private $size;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="file", type="string", length=255)
-     */
-    private $file;
-
-    /**
      * @var string
      *
      * @ORM\Column(name="content", type="string", length=16777215)
@@ -61,30 +47,6 @@ class Attachement
     public function setName(string $name): self
     {
         $this->name = $name;
-
-        return $this;
-    }
-
-    public function getSize(): ?int
-    {
-        return $this->size;
-    }
-
-    public function setSize(int $size): self
-    {
-        $this->size = $size;
-
-        return $this;
-    }
-
-    public function getFile(): ?string
-    {
-        return $this->file;
-    }
-
-    public function setFile(string $file): self
-    {
-        $this->file = $file;
 
         return $this;
     }
